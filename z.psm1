@@ -121,8 +121,7 @@ function z {
 
             if ($ListFiles) {
 
-                $newList = $list | % { New-Object PSObject -Property  @{Rank = $_.Rank; Path = $_.Path.FullName; LastAccessed = [DateTime]$_.Time } }
-                Format-Table -InputObject $newList -AutoSize
+                $list | % { New-Object PSObject -Property  @{Rank = $_.Rank; Path = $_.Path.FullName; LastAccessed = [DateTime]$_.Time } }
 
             } else {
 
